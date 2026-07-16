@@ -1,56 +1,157 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
-const Footer = () => (
-  <footer className="bg-gradient-to-t from-gray-100 to-white border-t mt-12 pt-8 pb-4 text-gray-700">
-    <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row md:justify-between md:items-start gap-6">
-      <div className="w-full md:w-[30%] flex flex-col items-start text-left mb-6 md:mb-0">
-        <img src="/smartAppInfoLogo.png" alt="SmartAppInfo.com Logo" className="h-14 w-auto mb-2" />
-        <span className="text-xs">&copy; {new Date().getFullYear()} SmartAppInfo.com. All rights reserved.</span>
+const Footer = () => {
+  return (
+    <footer className="bg-gradient-to-t from-gray-100 to-white border-t mt-12">
+      <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Logo */}
+        <div>
+          <img
+            src="/smartAppInfoLogo.webp"
+            alt="SmartAppInfo Logo"
+            className="h-14 w-auto mb-4"
+          />
+
+          <p className="text-sm text-gray-600 leading-6">
+            SmartAppInfo helps you discover trusted Android apps, reviews,
+            guides, and useful resources for a better mobile experience.
+          </p>
+
+        
+        </div>
+
+        {/* Company */}
+        <div>
+          <h3 className="text-lg font-semibold text-gray-800 mb-4">
+            Company
+          </h3>
+
+          <ul className="space-y-2 text-sm">
+            <li>
+              <Link
+                href="/about-us"
+                className="hover:text-blue-700 transition"
+              >
+                About Us
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                href="/contact-us"
+                className="hover:text-blue-700 transition"
+              >
+                Contact Us
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        {/* Policies */}
+        <div>
+          <h3 className="text-lg font-semibold text-gray-800 mb-4">
+            Policies
+          </h3>
+
+          <ul className="space-y-2 text-sm">
+            <li>
+              <Link
+                href="/privacy-policy"
+                className="hover:text-blue-700 transition"
+              >
+                Privacy Policy
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                href="/terms-of-service"
+                className="hover:text-blue-700 transition"
+              >
+                Terms of Service
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                href="/disclaimer"
+                className="hover:text-blue-700 transition"
+              >
+                Disclaimer
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        {/* Quick Links */}
+        <div>
+          <h3 className="text-lg font-semibold text-gray-800 mb-4">
+            Quick Links
+          </h3>
+
+          <ul className="space-y-2 text-sm">
+            <li>
+              <Link
+                href="/apps/entertainment"
+                className="hover:text-blue-700 transition"
+              >
+                Entertainment Apps
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                href="/apps/finance"
+                className="hover:text-blue-700 transition"
+              >
+                Finance Apps
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                href="/apps/tools"
+                className="hover:text-blue-700 transition"
+              >
+                Tools Apps
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                href="/apps/games"
+                className="hover:text-blue-700 transition"
+              >
+                Games
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div className="w-full md:w-[30%] flex flex-col mb-6 md:mb-0">
-        <span className="font-semibold text-gray-800 mb-2 block text-base">Company</span>
-        <ul className="flex flex-wrap gap-4 md:flex-col md:gap-2 text-sm">
-          <li><Link href="/about-us" className="hover:text-blue-700 transition">About Us</Link></li>
-          <li className="block md:hidden text-gray-400" aria-hidden="true">|</li>
-          <li><Link href="/contact-us" className="hover:text-blue-700 transition">Contact Us</Link></li>
-          <li className="block md:hidden text-gray-400" aria-hidden="true">|</li>
-          <li><Link href="/privacy-policy" className="hover:text-blue-700 transition">Privacy Policy</Link></li>
-          <li className="block md:hidden text-gray-400" aria-hidden="true">|</li>
-          <li><Link href="/cookie-policy" className="hover:text-blue-700 transition">Cookie Policy</Link></li>
-          <li className="block md:hidden text-gray-400" aria-hidden="true">|</li>
-          <li><Link href="/terms-of-service" className="hover:text-blue-700 transition">Terms of Service</Link></li>
-          <li className="block md:hidden text-gray-400" aria-hidden="true">|</li>
-          <li><Link href="/disclaimer" className="hover:text-blue-700 transition">Disclaimer</Link></li>
-          <li className="block md:hidden text-gray-400" aria-hidden="true">|</li>
-          <li><Link href="/accessibility-statement" className="hover:text-blue-700 transition">Accessibility</Link></li>
-          <li className="block md:hidden text-gray-400" aria-hidden="true">|</li>
-          <li><Link href="/dmca-policy" className="hover:text-blue-700 transition">DMCA Policy</Link></li>
-          <li className="block md:hidden text-gray-400" aria-hidden="true">|</li>
-          <li><Link href="/editorial-transparency" className="hover:text-blue-700 transition">Editorial Transparency</Link></li>
-        </ul>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-gray-200 py-4">
+        <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+          <span>© {new Date().getFullYear()} SmartAppInfo. All rights reserved.</span>
+
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/privacy-policy" className="hover:text-blue-700">
+              Privacy
+            </Link>
+            <Link href="/terms-of-service" className="hover:text-blue-700">
+              Terms
+            </Link>
+            <Link href="/contact-us" className="hover:text-blue-700">
+              Contact
+            </Link>
+          </div>
+        </div>
       </div>
-      <div className="w-full md:w-[30%] flex flex-col">
-        <span className="font-semibold text-gray-800 mb-2 block text-base">Quick Links</span>
-        <ul className="flex flex-wrap gap-4 md:flex-col md:gap-2 text-sm">
-          <li><Link href="/apps/entertainment" className="hover:text-blue-700 transition">Entertainment Apps</Link></li>
-          <li className="block md:hidden text-gray-400" aria-hidden="true">|</li>
-          <li><Link href="/apps/finance" className="hover:text-blue-700 transition">Finance Apps</Link></li>
-          <li className="block md:hidden text-gray-400" aria-hidden="true">|</li>
-          <li><Link href="/apps/tools" className="hover:text-blue-700 transition">Tools Apps</Link></li>
-          <li className="block md:hidden text-gray-400" aria-hidden="true">|</li>
-          <li><Link href="/apps/games" className="hover:text-blue-700 transition">Games</Link></li>
-          <li className="block md:hidden text-gray-400" aria-hidden="true">|</li>
-          {/* <li><Link href="/tools/zip-unzip" className="hover:text-blue-700 transition">Zip & Unzip</Link></li>
-          <li className="block md:hidden text-gray-400" aria-hidden="true">|</li>
-          <li><Link href="/tools/qr-tool" className="hover:text-blue-700 transition">QR Code Scanner & Generator</Link></li> */}
-        </ul>
-      </div>
-    </div>
-  </footer>
-);
+    </footer>
+  );
+};
 
 export default Footer;
-
