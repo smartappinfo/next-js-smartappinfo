@@ -22,7 +22,7 @@ const AdminLogin = () => {
       );
 
       if (res.data.token) {
-        localStorage.setItem('apkpac_admin_token', res.data.token);
+        localStorage.setItem('smartappinfo_admin_token', res.data.token);
         router.push('/admin/dashboard');
       } else {
         setError('Token not received');

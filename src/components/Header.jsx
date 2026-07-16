@@ -27,7 +27,7 @@ const Header = () => {
 
   // Logout handler
   const handleLogout = () => {
-    localStorage.removeItem('apkpac_admin_token');
+    localStorage.removeItem('smartappinfo_admin_token');
     router.push('/admin/login');
   };
 
@@ -107,7 +107,7 @@ const Header = () => {
         {/* Right: Nav */}
         <nav className="hidden lg:flex gap-2 xl:gap-6 items-center text-gray-800 font-semibold text-base md:text-lg">
           {/* Show logout only on admin routes if admin token exists */}
-          {isAdminRoute && typeof window !== 'undefined' && localStorage.getItem('apkpac_admin_token') && (
+          {isAdminRoute && typeof window !== 'undefined' && localStorage.getItem('smartappinfo_admin_token') && (
             <button onClick={handleLogout} className="bg-red-600 text-white px-4 py-2 rounded-xl ml-4 font-bold hover:bg-red-700 transition cursor-pointer">
               Logout
             </button>

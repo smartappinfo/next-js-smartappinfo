@@ -12,7 +12,7 @@ export default function DashboardLayout({ children }) {
   const [authorized, setAuthorized] = useState(false);
 
   useEffect(() => {
-    const token = localStorage.getItem('apkpac_admin_token');
+    const token = localStorage.getItem('smartappinfo_admin_token');
     if (!token) {
       router.push('/admin/login');
     } else {
@@ -29,7 +29,7 @@ export default function DashboardLayout({ children }) {
   }
 
   const handleLogout = () => {
-    localStorage.removeItem('apkpac_admin_token');
+    localStorage.removeItem('smartappinfo_admin_token');
     router.push('/admin/login');
   };
 

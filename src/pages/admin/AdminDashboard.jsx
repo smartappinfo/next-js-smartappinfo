@@ -17,7 +17,7 @@ const AdminDashboard = () => {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      setToken(localStorage.getItem('apkpac_admin_token'));
+      setToken(localStorage.getItem('smartappinfo_admin_token'));
     }
   }, []);
 
@@ -30,7 +30,7 @@ const AdminDashboard = () => {
   // Logout handler
   const handleLogout = () => {
     if (typeof window !== 'undefined') {
-      localStorage.removeItem('apkpac_admin_token');
+      localStorage.removeItem('smartappinfo_admin_token');
       router.push('/admin/login');
     }
   };

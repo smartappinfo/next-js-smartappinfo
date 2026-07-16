@@ -142,7 +142,7 @@ const AppManager = () => {
           // Upload icon to backend
           const fd = new FormData();
           fd.append('icon', iconFile);
-          const token = localStorage.getItem('apkpac_admin_token');
+          const token = localStorage.getItem('smartappinfo_admin_token');
           const res = await axios.post(`${API}/apps/upload-icon`, fd, {
             headers: {
               'Content-Type': 'multipart/form-data',
@@ -162,7 +162,7 @@ const AppManager = () => {
         try {
           const fd = new FormData();
           imageFiles.forEach((img) => fd.append('images', img));
-          const token = localStorage.getItem('apkpac_admin_token');
+          const token = localStorage.getItem('smartappinfo_admin_token');
           const res = await axios.post(`${API}/apps/upload-images`, fd, {
             headers: {
               'Content-Type': 'multipart/form-data',
@@ -177,7 +177,7 @@ const AppManager = () => {
         }
       }
       // Submit app (add or edit)
-      const token = localStorage.getItem('apkpac_admin_token');
+      const token = localStorage.getItem('smartappinfo_admin_token');
       if (isEdit) {
         await axios.put(`${API}/apps/${editId}`, {
           ...form,
@@ -218,7 +218,7 @@ const AppManager = () => {
     setLoading(true);
     setError('');
     try {
-      const token = localStorage.getItem('apkpac_admin_token');
+      const token = localStorage.getItem('smartappinfo_admin_token');
       await axios.delete(`${API}/apps/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`
