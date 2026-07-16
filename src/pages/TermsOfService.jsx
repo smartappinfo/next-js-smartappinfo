@@ -5,14 +5,14 @@ function TermsOfService() {
     <div className="max-w-4xl mx-auto px-4 py-8 text-gray-800 leading-relaxed font-sans">
       <h1 className="text-3xl font-bold mb-6 text-gray-900 border-b pb-4">Terms of Service</h1>
 
-      <h2 className="text-2xl font-semibold mt-8 mb-4 text-gray-900">Proprietary Rights</h2>
+      <h2 className="text-2xl font-semibold mt-8 mb-4 text-gray-900">Ownership & Intellectual Property</h2>
       <p className="mb-6">
-        As between you and Smart App Info, Smart App Info owns, solely and exclusively, all rights, title and interest in and to Smart App Info, all the content, data and materials thereon, the look and feel, design and organization of Smart App Info, and the compilation of the content, data and materials on Smart App Info, including but not limited to any copyrights, trademark rights, patent rights, database rights, moral rights, sui generis rights and other intellectual properties and proprietary rights therein.
+        Everything you see on Smart App Info belongs exclusively to us. This ownership covers all site content, data, visual styles, layouts, and overall interface design, alongside the curated collection of materials across our platform. This includes—but isn't limited to—all copyrights, trademarks, patents, database rights, and any other proprietary or intellectual property assets found on our site.
       </p>
 
-      <h2 className="text-2xl font-semibold mt-8 mb-4 text-gray-900">Trademarks</h2>
+      <h2 className="text-2xl font-semibold mt-8 mb-4 text-gray-900">Brand Assets & Trademarks</h2>
       <p className="mb-6">
-        The trademarks, logos, service marks and trade names (collectively the "Trademarks") displayed on Smart App Info are registered and unregistered Trademarks of Smart App Info and others and may not be used in connection with products and/or services that are not related to, associated with, or sponsored by their rights holders that are likely to cause customer confusion, or in any manner that disparages or discredits their rights holders.
+        The various logos, brand names, and service marks (collectively referred to as "Trademarks") featured on Smart App Info represent both registered and unregistered assets belonging to us or external parties. You are strictly prohibited from using these Trademarks to promote external products or services, especially in any way that might confuse users, imply an unearned official partnership, or unfairly criticize the original owners.
       </p>
     </div>
   );
