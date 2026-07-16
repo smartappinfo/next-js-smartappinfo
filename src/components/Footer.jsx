@@ -5,150 +5,40 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-t from-gray-100 to-white border-t mt-12">
-      <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        {/* Logo */}
-        <div>
+    <footer className="bg-white border-t border-gray-200 mt-12">
+      {/* Container with standard max width to align perfectly with your content */}
+      <div className="max-w-[1200px] mx-auto px-6 sm:px-8 py-12 flex flex-col gap-6">
+        
+        {/* Logo - increased height from h-9 to h-12 for better visibility */}
+        <div className="flex items-center">
           <img
             src="/smartAppInfoLogo.webp"
             alt="SmartAppInfo Logo"
-            className="h-14 w-auto mb-4"
+            className="h-12 w-auto object-contain" 
           />
+        </div>
 
-          <p className="text-sm text-gray-600 leading-6">
-            SmartAppInfo helps you discover trusted Android apps, reviews,
-            guides, and useful resources for a better mobile experience.
-          </p>
+        {/* Vertical links - text size increased to text-base (16px) with comfortable vertical gaps */}
+        <nav className="flex flex-col space-y-3.5 text-base text-gray-800 font-medium">
+          <Link href="/about-us" className="hover:text-blue-600 transition w-fit">
+            About Us
+          </Link>
+          <Link href="/privacy-policy" className="hover:text-blue-600 transition w-fit">
+            Privacy Policy
+          </Link>
+          <Link href="/terms-of-service" className="hover:text-blue-600 transition w-fit">
+            Terms of Service
+          </Link>
+          <Link href="/disclaimer" className="hover:text-blue-600 transition w-fit">
+            Disclaimer
+          </Link>
+        </nav>
 
+        {/* Copyright - text size increased to 14px (text-sm) with standard spacing */}
+        <div className="text-sm text-gray-500 pt-2">
+          <span>Copyright {new Date().getFullYear()} © SmartAppInfo. All Rights Reserved.</span>
+        </div>
         
-        </div>
-
-        {/* Company */}
-        <div>
-          <h3 className="text-lg font-semibold text-gray-800 mb-4">
-            Company
-          </h3>
-
-          <ul className="space-y-2 text-sm">
-            <li>
-              <Link
-                href="/about-us"
-                className="hover:text-blue-700 transition"
-              >
-                About Us
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                href="/contact-us"
-                className="hover:text-blue-700 transition"
-              >
-                Contact Us
-              </Link>
-            </li>
-          </ul>
-        </div>
-
-        {/* Policies */}
-        <div>
-          <h3 className="text-lg font-semibold text-gray-800 mb-4">
-            Policies
-          </h3>
-
-          <ul className="space-y-2 text-sm">
-            <li>
-              <Link
-                href="/privacy-policy"
-                className="hover:text-blue-700 transition"
-              >
-                Privacy Policy
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                href="/terms-of-service"
-                className="hover:text-blue-700 transition"
-              >
-                Terms of Service
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                href="/disclaimer"
-                className="hover:text-blue-700 transition"
-              >
-                Disclaimer
-              </Link>
-            </li>
-          </ul>
-        </div>
-
-        {/* Quick Links */}
-        <div>
-          <h3 className="text-lg font-semibold text-gray-800 mb-4">
-            Quick Links
-          </h3>
-
-          <ul className="space-y-2 text-sm">
-            <li>
-              <Link
-                href="/apps/entertainment"
-                className="hover:text-blue-700 transition"
-              >
-                Entertainment Apps
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                href="/apps/finance"
-                className="hover:text-blue-700 transition"
-              >
-                Finance Apps
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                href="/apps/tools"
-                className="hover:text-blue-700 transition"
-              >
-                Tools Apps
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                href="/apps/games"
-                className="hover:text-blue-700 transition"
-              >
-                Games
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      {/* Bottom Bar */}
-      <div className="border-t border-gray-200 py-4">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-gray-500">
-          <span>© {new Date().getFullYear()} SmartAppInfo. All rights reserved.</span>
-
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/privacy-policy" className="hover:text-blue-700">
-              Privacy
-            </Link>
-            <Link href="/terms-of-service" className="hover:text-blue-700">
-              Terms
-            </Link>
-            <Link href="/contact-us" className="hover:text-blue-700">
-              Contact
-            </Link>
-          </div>
-        </div>
       </div>
     </footer>
   );
